@@ -7,5 +7,12 @@
     <string name="click_to_login">Click to Login</string>
     <string name="click_to_register">Click to Register</string>
     <string name="logout">Logout</string>
+    <string name="randevu_al">RANDEVU AL</string>
+    <string name="randevu_iptal">RANDEVU İPTAL</string>
+    <string name="randevularım">RANDEVULARIM</string>
+    <string name="ad">Ad</string>
+    <string name="soyad">Soyad</string>
+    <string name="tc_kimlik_no">TC Kimlik No</string>
+    <string name="randevu_olustur">Randevu Oluştur</string>
 
 </resources>

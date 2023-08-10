@@ -14,7 +14,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class MainActivity extends AppCompatActivity {
 
     FirebaseAuth auth;
-    Button buttonLogout;
+    Button buttonLogout,buttonRandevuAl;
     TextView textView;
     FirebaseUser user;
 
@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         auth = FirebaseAuth.getInstance();
         buttonLogout = findViewById(R.id.logout);
+        buttonRandevuAl = findViewById(R.id.button_randevu_al);
         textView = findViewById(R.id.user_details);
         user = auth.getCurrentUser();
 
@@ -48,5 +49,14 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
+        buttonRandevuAl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), RandevuAl.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
     }
 }

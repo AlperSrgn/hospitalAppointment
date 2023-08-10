@@ -8,16 +8,60 @@
     android:gravity="center"
     tools:context=".MainActivity">
 
+
     <TextView
         android:id="@+id/user_details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"/>
+        android:layout_marginBottom="10dp"
+        android:text="Hello World!" />
+
+
+    <Button
+        android:id="@+id/button_randevu_al"
+        android:layout_width="330dp"
+        android:layout_height="130dp"
+        android:backgroundTint="#40C8DA"
+        android:text="@string/randevu_al"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:cornerRadius="50dp" />
+
+    <Button
+        android:id="@+id/button_randevularım"
+        android:layout_width="330dp"
+        android:layout_height="130dp"
+        android:backgroundTint="#8C8A8A"
+        android:text="@string/randevularım"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:layout_marginVertical="10dp"
+        app:cornerRadius="50dp" />
+
+    <Button
+        android:id="@+id/button_randevu_iptal"
+        android:layout_width="330dp"
+        android:layout_height="130dp"
+        android:backgroundTint="#FF004F"
+        android:text="@string/randevu_iptal"
+        android:textColor="#FFFFFF"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:cornerRadius="50dp"/>
+
 
     <Button
         android:id="@+id/logout"
-        android:text="@string/logout"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="@string/logout"
+        app:backgroundTint="@color/design_default_color_error" />
 
 </LinearLayout>
