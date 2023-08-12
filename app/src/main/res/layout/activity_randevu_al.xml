@@ -4,35 +4,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     android:gravity="center"
     android:orientation="vertical"
     android:padding="15dp"
     tools:context=".RandevuAl">
+
+    <ImageView
+        android:layout_width="270dp"
+        android:layout_height="270dp"
+        android:layout_marginTop="-200dp"
+        android:src="@drawable/randevu" />
 
 
     <EditText
         android:id="@+id/ad"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/ad"/>
+        android:drawableEnd="@drawable/ic_name"
+        android:hint="@string/ad" />
 
     <EditText
         android:id="@+id/soyad"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/soyad"/>
+        android:drawableEnd="@drawable/ic_name"
+        android:hint="@string/soyad" />
 
     <EditText
         android:id="@+id/tc_kimlik_no"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/tc_kimlik_no"/>
-    
+        android:hint="@string/tc_kimlik_no"
+        android:inputType="number" />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:onClick="sendData"
         android:text="@string/randevu_olustur"
-        android:layout_marginTop="20dp" />
+        app:backgroundTint="@color/material_dynamic_primary40" />
 
 </LinearLayout>
