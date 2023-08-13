@@ -36,7 +36,7 @@ public class Register extends AppCompatActivity {
         if(currentUser != null){
             Intent intent = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(intent);
-            finish();
+
         }
     }
 
@@ -59,7 +59,7 @@ public class Register extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), Login.class);
                 startActivity(intent);
-                finish();
+
             }
 
         });
@@ -93,7 +93,7 @@ public class Register extends AppCompatActivity {
                                     Toast.makeText(Register.this, "Account created", Toast.LENGTH_SHORT).show();
                                     Intent intent = new Intent(getApplicationContext(), Login.class);
                                     startActivity(intent);
-                                    finish();
+
 
                                 } else {
                                     Toast.makeText(Register.this, "Authentication failed.", Toast.LENGTH_SHORT).show();

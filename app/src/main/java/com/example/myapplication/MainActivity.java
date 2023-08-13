@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         if (user == null){
             Intent intent = new Intent(getApplicationContext(), Login.class);
             startActivity(intent);
-            finish();
+
         }
 
         else{
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
                 FirebaseAuth.getInstance().signOut();
                 Intent intent = new Intent(getApplicationContext(), Login.class);
                 startActivity(intent);
-                finish();
+
             }
         });
         buttonRandevuAl.setOnClickListener(new View.OnClickListener() {
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), RandevuAl.class);
                 startActivity(intent);
-                finish();
+
             }
         });
 
