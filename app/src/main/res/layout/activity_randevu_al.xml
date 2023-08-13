@@ -14,7 +14,7 @@
     <ImageView
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:layout_marginTop="-150dp"
+        android:layout_marginTop="-90dp"
         android:src="@drawable/randevu" />
 
 
@@ -75,7 +75,15 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:entries="@array/sehirler"
-        android:hint="Marka giriniz"
+        android:hint="@string/sehir_secimi"
+        android:inputType="text" />
+
+    <Spinner
+        android:id="@+id/hastaneler"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:entries="@array/hastaneler"
+        android:hint="@string/hastane_secim"
         android:inputType="text" />
 
     <Button

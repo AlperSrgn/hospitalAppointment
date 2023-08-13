@@ -7,7 +7,7 @@
     <string name="click_to_login">Click to Login</string>
     <string name="click_to_register">Click to Register</string>
     <string name="logout">Logout</string>
-    <string name="randevu_al">RANDEVU AL</string>
+    <string name="randevu_al">AŞI RANDEVUSU AL</string>
     <string name="randevu_iptal">RANDEVU İPTAL</string>
     <string name="randevularım">RANDEVULARIM</string>
     <string name="ad">Ad</string>
@@ -15,13 +15,15 @@
     <string name="tc_kimlik_no">TC Kimlik No</string>
     <string name="randevu_olustur">Randevu Oluştur</string>
     <string name="telefon">Telefon</string>
+    <string name="sehir_secimi">Şehir Seçiniz</string>
+    <string name="hastane_secim">Hastane Seçiniz</string>
 
 
     <string-array name="sehirler">
         <item>Adana</item>
         <item>Adıyaman</item>
         <item>Afyon</item>
-        <item>Ağrı</item>
+        <item>Aksaray</item>
         <item>Amasya</item>
         <item>Ankara</item>
         <item>Antalya</item>
@@ -35,7 +37,6 @@
         <item>Burdur</item>
         <item>Bursa</item>
         <item>Çanakkale</item>
-        <item>Çankırı</item>
         <item>Çorum</item>
         <item>Denizli</item>
         <item>Diyarbakır</item>
@@ -100,5 +101,8 @@
         <item>Osmaniye</item>
         <item>Düzce</item>
     </string-array>
+
+    <string-array name="hastaneler">hastaneler</string-array>
+
 
 </resources>
