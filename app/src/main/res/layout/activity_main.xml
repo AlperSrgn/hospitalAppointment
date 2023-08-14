@@ -31,11 +31,11 @@
         app:cornerRadius="50dp" />
 
     <Button
-        android:id="@+id/button_randevularım"
+        android:id="@+id/button_randevularim"
         android:layout_width="330dp"
         android:layout_height="130dp"
         android:backgroundTint="#8C8A8A"
-        android:text="@string/randevularım"
+        android:text="@string/randevularim"
         android:textColor="#FFFFFF"
         android:textColorHighlight="#FFFFFF"
         android:textColorHint="#FFFFFF"

@@ -1,23 +1,16 @@
 package com.example.myapplication;
 
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.Spinner;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.material.textfield.TextInputEditText;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -34,7 +27,7 @@ public class RandevuAl extends AppCompatActivity {
 
     Map<String, ArrayList<String>> HastanelerMap;
 
-    @SuppressLint("WrongViewCast")
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,7 +56,7 @@ public class RandevuAl extends AppCompatActivity {
                 SpinnerSehirler.getSelectedItem().toString(),
                 SpinnerHastaneler.getSelectedItem().toString());
 
-        mDatabase.child("users").child("Kimlik No:" + user.getKimlikNo()).setValue(user);
+        mDatabase.child("users").child(user.getKimlikNo()).setValue(user);
     }
 
     public void sendData(View view) {

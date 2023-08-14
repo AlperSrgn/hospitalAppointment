@@ -9,7 +9,7 @@
     <string name="logout">Logout</string>
     <string name="randevu_al">AŞI RANDEVUSU AL</string>
     <string name="randevu_iptal">RANDEVU İPTAL</string>
-    <string name="randevularım">RANDEVULARIM</string>
+    <string name="randevularim">RANDEVULARIM</string>
     <string name="ad">Ad</string>
     <string name="soyad">Soyad</string>
     <string name="tc_kimlik_no">TC Kimlik No</string>
@@ -17,6 +17,7 @@
     <string name="telefon">Telefon</string>
     <string name="sehir_secimi">Şehir Seçiniz</string>
     <string name="hastane_secim">Hastane Seçiniz</string>
+    <string name="randevu_ara">RANDEVU ARA</string>
 
 
     <string-array name="sehirler">
