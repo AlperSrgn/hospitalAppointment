@@ -31,9 +31,28 @@ public class Randevularim extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_randevularim);
 
+        binding = ActivityRandevularimBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
-    binding = ActivityRandevularimBinding.inflate(getLayoutInflater());
-    setContentView(binding.getRoot());
+    binding.randevuSilBtn.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            String tcNo = binding.tcKimlikNo.getText().toString();
+            if(!tcNo.isEmpty()){
+                deleteData(tcNo);
+                binding.dbAd.setText("");
+                binding.dbSoyad.setText("");
+                binding.dbSehir.setText("");
+                binding.dbHastane.setText("");
+                binding.dbGun.setText("");
+                binding.dbSaat.setText("");
+            }
+            else{
+                Toast.makeText(Randevularim.this, "Tc Kimlik Numarası Girin",Toast.LENGTH_SHORT).show();
+            }
+        }
+    });
+
 
     binding.randevuAraBtn.setOnClickListener(new View.OnClickListener() {
         @Override
@@ -50,6 +69,7 @@ public class Randevularim extends AppCompatActivity {
     });
 
     }
+
 
     private void readData(String tcNo) {
         reference = FirebaseDatabase.getInstance().getReference("users");
@@ -82,6 +102,21 @@ public class Randevularim extends AppCompatActivity {
                 }
                 else{
                     Toast.makeText(getApplicationContext(), "İşlem Başarısız",Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+    }
+    private void deleteData(String ad) {
+        reference = FirebaseDatabase.getInstance().getReference("users");
+        reference.child(ad).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if(task.isSuccessful()){
+                    Toast.makeText(getApplicationContext(), "Randevu Silindi", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    Toast.makeText(getApplicationContext(), "Randevu Silme Başarısız", Toast.LENGTH_SHORT).show();
                 }
             }
         });
