@@ -1,12 +1,12 @@
 <resources>
     <string name="app_name">My Application</string>
-    <string name="login">Login</string>
+    <string name="girisYap">Giriş Yap</string>
     <string name="email">Email</string>
-    <string name="password">Password</string>
-    <string name="register">Register</string>
-    <string name="click_to_login">Click to Login</string>
-    <string name="click_to_register">Click to Register</string>
-    <string name="logout">Logout</string>
+    <string name="sifre">Şifre</string>
+    <string name="kayıt_ol">Kayıt Ol</string>
+    <string name="giris_yapmak_icin_tikla">Giriş Yapmak İçin Tıkla</string>
+    <string name="kayit_olmak_icin_tikla">Kayıt Olmak İçin Tıkla</string>
+    <string name="cikisYap">Çıkış Yap</string>
     <string name="randevu_al">AŞI RANDEVUSU AL</string>
     <string name="randevu_iptal">RANDEVU İPTAL</string>
     <string name="randevularim">RANDEVULARIM</string>
@@ -18,6 +18,9 @@
     <string name="sehir_secimi">Şehir Seçiniz</string>
     <string name="hastane_secim">Hastane Seçiniz</string>
     <string name="randevu_ara">RANDEVU ARA</string>
+    <string name="gun_secim">Gün</string>
+    <string name="saat_secim">Saat</string>
+    <string name="randevu_sil">RANDEVUYU SİL</string>
 
 
     <string-array name="sehirler">
@@ -101,6 +104,56 @@
         <item>Kilis</item>
         <item>Osmaniye</item>
         <item>Düzce</item>
+    </string-array>
+
+    <string-array name="gunler">
+        <item>Pazartesi</item>
+        <item>Salı</item>
+        <item>Çarşamba</item>
+        <item>Perşembe</item>
+        <item>Cuma</item>
+        <item>Cumartesi</item>
+        <item>Pazar</item>
+    </string-array>
+
+    <string-array name="saatler">
+        <item>08:00</item>
+        <item>08:15</item>
+        <item>08:30</item>
+        <item>08:45</item>
+        <item>09:00</item>
+        <item>09:15</item>
+        <item>09:30</item>
+        <item>09:45</item>
+        <item>10:00</item>
+        <item>10:15</item>
+        <item>10:30</item>
+        <item>10:45</item>
+        <item>11:00</item>
+        <item>11:15</item>
+        <item>11:30</item>
+        <item>11:45</item>
+        <item>12:00</item>
+        <item>12:15</item>
+        <item>12:30</item>
+        <item>12:45</item>
+        <item>13:00</item>
+        <item>13:15</item>
+        <item>13:30</item>
+        <item>13:45</item>
+        <item>14:00</item>
+        <item>14:15</item>
+        <item>14:30</item>
+        <item>14:45</item>
+        <item>15:00</item>
+        <item>15:15</item>
+        <item>15:30</item>
+        <item>15:45</item>
+        <item>16:00</item>
+        <item>16:15</item>
+        <item>16:30</item>
+        <item>16:45</item>
+        <item>17:00</item>
     </string-array>
 
     <string-array name="hastaneler">hastaneler</string-array>

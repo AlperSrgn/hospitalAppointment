@@ -23,7 +23,7 @@ public class RandevuAl extends AppCompatActivity {
 
     private DatabaseReference mDatabase;
     private TextInputEditText TextInputEditTextAd,TextInputEditTextSoyad,TextInputEditTextTcNo,TextInputEditTextTelefon;
-    Spinner SpinnerSehirler, SpinnerHastaneler;
+    Spinner SpinnerSehirler, SpinnerHastaneler, SpinnerGunler, SpinnerSaatler;
 
     Map<String, ArrayList<String>> HastanelerMap;
 
@@ -39,6 +39,9 @@ public class RandevuAl extends AppCompatActivity {
         TextInputEditTextTelefon = findViewById(R.id.telefon);
         SpinnerSehirler = findViewById(R.id.sehir);
         SpinnerHastaneler = findViewById(R.id.hastaneler);
+        SpinnerGunler = findViewById(R.id.gun);
+        SpinnerSaatler = findViewById(R.id.saat);
+
 
         initializeHastaneler();
         setupSehirlerSpinner();
@@ -54,7 +57,9 @@ public class RandevuAl extends AppCompatActivity {
                 TextInputEditTextTcNo.getText().toString(),
                 TextInputEditTextTelefon.getText().toString(),
                 SpinnerSehirler.getSelectedItem().toString(),
-                SpinnerHastaneler.getSelectedItem().toString());
+                SpinnerHastaneler.getSelectedItem().toString(),
+                SpinnerGunler.getSelectedItem().toString(),
+                SpinnerSaatler.getSelectedItem().toString());
 
         mDatabase.child("users").child(user.getKimlikNo()).setValue(user);
     }

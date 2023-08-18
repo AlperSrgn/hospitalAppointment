@@ -43,7 +43,7 @@
         android:layout_height="wrap_content">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/password"
-            android:hint="@string/password"
+            android:hint="@string/sifre"
             android:inputType="textPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -61,7 +61,7 @@
         android:layout_width="106dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="@string/register"
+        android:text="@string/kayıt_ol"
         android:background="@color/material_dynamic_primary60"
         android:textColor="@color/white" />
     
@@ -71,7 +71,7 @@
         android:gravity="center"
         android:layout_marginTop="20dp"
         android:id="@id/loginNow"
-        android:text="@string/click_to_login"
+        android:text="@string/giris_yapmak_icin_tikla"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 

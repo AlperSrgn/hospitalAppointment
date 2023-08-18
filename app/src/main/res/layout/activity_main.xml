@@ -14,54 +14,52 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:text="Hello World!" />
+        android:textStyle="bold"
+        android:text=" " />
 
 
     <Button
         android:id="@+id/button_randevu_al"
-        android:layout_width="330dp"
-        android:layout_height="130dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
         android:backgroundTint="#40C8DA"
         android:text="@string/randevu_al"
         android:textColor="#FFFFFF"
         android:textColorHighlight="#FFFFFF"
         android:textColorHint="#FFFFFF"
         android:textSize="30sp"
-        android:textStyle="bold"
-        app:cornerRadius="50dp" />
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/button_randevularim"
-        android:layout_width="330dp"
-        android:layout_height="130dp"
-        android:backgroundTint="#8C8A8A"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:backgroundTint="#B774C3"
         android:text="@string/randevularim"
         android:textColor="#FFFFFF"
         android:textColorHighlight="#FFFFFF"
         android:textColorHint="#FFFFFF"
         android:textSize="32sp"
         android:textStyle="bold"
-        android:layout_marginVertical="10dp"
-        app:cornerRadius="50dp" />
+        android:layout_marginVertical="10dp" />
 
     <Button
         android:id="@+id/button_randevu_iptal"
-        android:layout_width="330dp"
-        android:layout_height="130dp"
-        android:backgroundTint="#FF004F"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:backgroundTint="#EC407A"
         android:text="@string/randevu_iptal"
         android:textColor="#FFFFFF"
         android:textSize="32sp"
-        android:textStyle="bold"
-        app:cornerRadius="50dp"/>
+        android:textStyle="bold" />
 
 
     <Button
         android:id="@+id/logout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:text="@string/logout"
-        app:backgroundTint="@color/design_default_color_error" />
+        android:textColor="@color/white"
+        android:text="@string/cikisYap"
+        app:backgroundTint="@android:color/holo_red_dark" />
 
 </LinearLayout>

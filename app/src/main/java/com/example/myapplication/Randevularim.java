@@ -65,10 +65,14 @@ public class Randevularim extends AppCompatActivity {
                         String soyad = String.valueOf(dataSnapshot.child("soyad").getValue());
                         String sehir = String.valueOf(dataSnapshot.child("sehir").getValue());
                         String hastane = String.valueOf(dataSnapshot.child("hastane").getValue());
+                        String gun = String.valueOf(dataSnapshot.child("gun").getValue());
+                        String saat = String.valueOf(dataSnapshot.child("saat").getValue());
                         binding.dbAd.setText(ad);
                         binding.dbSoyad.setText(soyad);
                         binding.dbSehir.setText(sehir);
                         binding.dbHastane.setText(hastane);
+                        binding.dbGun.setText(gun);
+                        binding.dbSaat.setText(saat);
 
                     }
                     else{

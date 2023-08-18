@@ -8,6 +8,7 @@
     android:gravity="center"
     android:orientation="vertical"
     android:padding="15dp"
+
     tools:context=".RandevuAl">
 
 
@@ -86,12 +87,29 @@
         android:hint="@string/hastane_secim"
         android:inputType="text" />
 
+    <Spinner
+        android:id="@+id/gun"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:entries="@array/gunler"
+        android:hint="@string/gun_secim"
+        android:inputType="text" />
+
+    <Spinner
+        android:id="@+id/saat"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:entries="@array/saatler"
+        android:hint="@string/saat_secim"
+        android:inputType="text" />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:onClick="sendData"
         android:text="@string/randevu_olustur"
+        android:textColor="@color/white"
         app:backgroundTint="@color/material_dynamic_primary40" />
 
 </LinearLayout>
