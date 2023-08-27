@@ -21,6 +21,7 @@
     <string name="gun_secim">Gün</string>
     <string name="saat_secim">Saat</string>
     <string name="randevu_sil">RANDEVUYU SİL</string>
+    <string name="hekimler">HEKİMLER</string>
 
 
     <string-array name="sehirler">

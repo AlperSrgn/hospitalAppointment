@@ -29,7 +29,10 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:layout_marginBottom="10dp"
+        android:padding="5dp">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/email"
             android:hint="@string/email"
@@ -40,12 +43,15 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:padding="5dp">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/password"
             android:hint="@string/sifre"
             android:inputType="textPassword"
             android:layout_width="match_parent"
+
             android:layout_height="wrap_content"
             android:drawableEnd="@drawable/ic_password"/>
     </com.google.android.material.textfield.TextInputLayout>

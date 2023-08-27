@@ -20,7 +20,9 @@
         android:id="@+id/tcKimlikNo"
         android:hint="@string/tc_kimlik_no"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
+        android:padding="5dp"
+        android:background="@drawable/border"
         android:drawableEnd="@drawable/baseline_verified_user_24" />
 
     <Button
