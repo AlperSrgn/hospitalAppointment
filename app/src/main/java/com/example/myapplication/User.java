@@ -2,20 +2,20 @@ package com.example.myapplication;
 
 public class User {
 
-    private String ad, soyad, kimlikNo, telefon, sehir, hastane, gun, saat;
+    private String ad, soyad, kimlikNo, telefon, tarih, hastane, sehir, saat;
 
     public User() {
 
     }
 
-    public User(String ad, String soyad, String kimlikNo, String telefon, String sehir, String hastane, String gun, String saat) {
+    public User(String ad, String soyad, String kimlikNo, String telefon, String tarih, String sehir, String hastane, String saat) {
         this.ad = ad;
         this.soyad = soyad;
         this.kimlikNo = kimlikNo;
         this.telefon = telefon;
-        this.sehir = sehir;
+        this.tarih = tarih;
         this.hastane = hastane;
-        this.gun = gun;
+        this.sehir = sehir;
         this.saat = saat;
     }
 
@@ -27,11 +27,11 @@ public class User {
 
     public  String getTelefon(){return telefon;}
 
-    public  String getSehir(){return sehir;}
+    public  String getTarih(){return tarih;}
 
     public  String getHastane(){return hastane;}
 
-    public  String getGun(){return gun;}
+    public  String getSehir(){return sehir;}
 
     public  String getSaat(){return saat;}
 }

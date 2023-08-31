@@ -22,6 +22,7 @@
     <string name="saat_secim">Saat</string>
     <string name="randevu_sil">RANDEVUYU SİL</string>
     <string name="hekimler">HEKİMLER</string>
+    <string name="tarih">Tarih</string>
 
 
     <string-array name="sehirler">

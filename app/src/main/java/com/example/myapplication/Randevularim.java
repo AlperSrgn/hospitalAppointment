@@ -39,7 +39,7 @@ public class Randevularim extends AppCompatActivity {
                 binding.dbSoyad.setText("");
                 binding.dbSehir.setText("");
                 binding.dbHastane.setText("");
-                binding.dbGun.setText("");
+                binding.dbTarih.setText("");
                 binding.dbSaat.setText("");
             }
             else{
@@ -80,13 +80,13 @@ public class Randevularim extends AppCompatActivity {
                         String soyad = String.valueOf(dataSnapshot.child("soyad").getValue());
                         String sehir = String.valueOf(dataSnapshot.child("sehir").getValue());
                         String hastane = String.valueOf(dataSnapshot.child("hastane").getValue());
-                        String gun = String.valueOf(dataSnapshot.child("gun").getValue());
+                        String tarih = String.valueOf(dataSnapshot.child("tarih").getValue());
                         String saat = String.valueOf(dataSnapshot.child("saat").getValue());
                         binding.dbAd.setText(ad);
                         binding.dbSoyad.setText(soyad);
                         binding.dbSehir.setText(sehir);
                         binding.dbHastane.setText(hastane);
-                        binding.dbGun.setText(gun);
+                        binding.dbTarih.setText(tarih);
                         binding.dbSaat.setText(saat);
 
                     }

@@ -82,6 +82,24 @@
             android:inputType="number" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <Button
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/Btntarih"
+        android:layout_margin="10dp"
+        android:layout_centerInParent="true"
+        android:text="Randevu Tarihi Seçin"
+        android:background="@drawable/border"/>
+
+    <TextView
+        android:id="@+id/dateTxt"
+        android:layout_margin="5dp"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/dateTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" " />
+
     <Spinner
         android:id="@+id/sehir"
         android:layout_width="match_parent"
@@ -98,13 +116,6 @@
         android:hint="@string/hastane_secim"
         android:inputType="text" />
 
-    <Spinner
-        android:id="@+id/gun"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:entries="@array/gunler"
-        android:hint="@string/gun_secim"
-        android:inputType="text" />
 
     <Spinner
         android:id="@+id/saat"

@@ -27,10 +27,12 @@
 
     <Button
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
         android:text="@string/randevu_ara"
         android:id="@+id/randevuAraBtn"
+        android:background="@drawable/border"
         android:backgroundTint="@color/design_default_color_secondary" />
 
 
@@ -86,14 +88,14 @@
     <TextView
         android:layout_width="100dp"
         android:layout_height="30dp"
-        android:text="@string/gun_secim"
+        android:text="@string/tarih"
         android:textSize="20dp"
         android:textStyle="bold" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="30dp"
-        android:id="@+id/dbGun"/>
+        android:id="@+id/dbTarih"/>
 
     <TextView
         android:layout_width="100dp"
@@ -109,12 +111,13 @@
 
     <Button
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="20dp"
         android:text="@string/randevu_sil"
         android:id="@+id/randevuSilBtn"
         android:textColor="@color/white"
+        android:background="@drawable/border"
         android:backgroundTint="@android:color/holo_red_light" />
 
 </LinearLayout>
