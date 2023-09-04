@@ -30,7 +30,7 @@ import java.util.Map;
 
 public class RandevuAl extends AppCompatActivity {
 
-    FirebaseAuth mAuth;
+
     private Button BtnTarih;
     private DatePickerDialog datePickerDialog;
     private TextView DateTxt;
@@ -49,7 +49,6 @@ public class RandevuAl extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_randevu_al);
 
-        mAuth = FirebaseAuth.getInstance();
         TextInputEditTextAd = findViewById(R.id.ad);
         TextInputEditTextSoyad = findViewById(R.id.soyad);
         TextInputEditTextTcNo = findViewById(R.id.tc_kimlik_no);
@@ -88,7 +87,6 @@ public class RandevuAl extends AppCompatActivity {
     }
 
 
-
     public void writeNewUser() {
         User user = new User(TextInputEditTextAd.getText().toString(),
                 TextInputEditTextSoyad.getText().toString(),
@@ -99,8 +97,8 @@ public class RandevuAl extends AppCompatActivity {
                 SpinnerHastaneler.getSelectedItem().toString(),
                 SpinnerSaatler.getSelectedItem().toString());
 
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        mDatabase.child("users").child(currentUser.getUid()).setValue(user);
+
+        mDatabase.child("users").child(user.getKimlikNo()).setValue(user);
     }
 
 
