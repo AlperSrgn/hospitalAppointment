@@ -18,6 +18,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -28,6 +30,7 @@ import java.util.Map;
 
 public class RandevuAl extends AppCompatActivity {
 
+    FirebaseAuth mAuth;
     private Button BtnTarih;
     private DatePickerDialog datePickerDialog;
     private TextView DateTxt;
@@ -46,6 +49,7 @@ public class RandevuAl extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_randevu_al);
 
+        mAuth = FirebaseAuth.getInstance();
         TextInputEditTextAd = findViewById(R.id.ad);
         TextInputEditTextSoyad = findViewById(R.id.soyad);
         TextInputEditTextTcNo = findViewById(R.id.tc_kimlik_no);
@@ -95,8 +99,11 @@ public class RandevuAl extends AppCompatActivity {
                 SpinnerHastaneler.getSelectedItem().toString(),
                 SpinnerSaatler.getSelectedItem().toString());
 
-        mDatabase.child("users").child(user.getKimlikNo()).setValue(user);
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        mDatabase.child("users").child(currentUser.getUid()).setValue(user);
     }
+
+
 
     public void sendData(View view) {
         writeNewUser();
