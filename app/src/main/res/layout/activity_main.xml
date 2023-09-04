@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingTop="50dp"
+    android:paddingTop="80dp"
     android:background="@color/material_dynamic_neutral95"
     tools:context=".MainActivity">
 
@@ -89,7 +89,7 @@
         android:layout_width="190dp"
         android:layout_height="100dp"
         android:layout_below="@id/alanlar"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="5dp"
         android:layout_marginTop="50dp"
         android:background="@drawable/menu_border"
         android:backgroundTint="@color/white"
