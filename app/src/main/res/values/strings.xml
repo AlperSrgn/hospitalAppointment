@@ -7,8 +7,8 @@
     <string name="giris_yapmak_icin_tikla">Giriş Yapmak İçin Tıkla</string>
     <string name="kayit_olmak_icin_tikla">Kayıt Olmak İçin Tıkla</string>
     <string name="cikisYap">Çıkış Yap</string>
-    <string name="randevu_al">AŞI RANDEVUSU AL</string>
-    <string name="randevu_iptal">RANDEVU İPTAL</string>
+    <string name="randevu_al">RANDEVU AL</string>
+    <string name="alanlar">Alanlar</string>
     <string name="randevularim">RANDEVULARIM</string>
     <string name="ad">Ad</string>
     <string name="soyad">Soyad</string>
