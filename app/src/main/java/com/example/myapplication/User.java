@@ -2,13 +2,14 @@ package com.example.myapplication;
 
 public class User {
 
-    private String ad, soyad, kimlikNo, telefon, tarih, hastane, sehir, saat;
+    private String ad, soyad, kimlikNo, telefon, tarih, hastane, sehir, saat, alan;
 
     public User() {
 
     }
 
-    public User(String ad, String soyad, String kimlikNo, String telefon, String tarih, String sehir, String hastane, String saat) {
+    public User(String ad, String soyad, String kimlikNo, String telefon,
+                String tarih, String sehir, String hastane, String alan, String saat) {
         this.ad = ad;
         this.soyad = soyad;
         this.kimlikNo = kimlikNo;
@@ -17,6 +18,7 @@ public class User {
         this.hastane = hastane;
         this.sehir = sehir;
         this.saat = saat;
+        this.alan = alan;
     }
 
     public String getAd() {return ad;}
@@ -34,4 +36,6 @@ public class User {
     public  String getSehir(){return sehir;}
 
     public  String getSaat(){return saat;}
+
+    public  String getAlan(){return alan;}
 }

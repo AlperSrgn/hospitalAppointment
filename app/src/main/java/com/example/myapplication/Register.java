@@ -21,7 +21,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class Register extends AppCompatActivity {
 
-    TextInputEditText editTextEmail, editTextPassword;
+    TextInputEditText editTextEmail, editTextPassword, editTextRepeatPassword;
     Button buttonRegister;
     FirebaseAuth mAuth;
     ProgressBar progressBar;
@@ -49,6 +49,7 @@ public class Register extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         editTextEmail = findViewById(R.id.email);
         editTextPassword = findViewById(R.id.password);
+        editTextRepeatPassword = findViewById(R.id.repeatPassword);
         buttonRegister = findViewById(R.id.btn_register);
         progressBar = findViewById(R.id.progressBar);
         textView = findViewById(R.id.loginNow);
@@ -67,10 +68,10 @@ public class Register extends AppCompatActivity {
         buttonRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                progressBar.setVisibility(View.VISIBLE);
-                String email, password;
+                String email, password, repeatPassword;
                 email = String.valueOf(editTextEmail.getText());
                 password = String.valueOf(editTextPassword.getText());
+                repeatPassword = String.valueOf(editTextRepeatPassword.getText());
 
                 if (TextUtils.isEmpty(email)){
                     Toast.makeText(Register.this, "Email Girin", Toast.LENGTH_SHORT).show();
@@ -82,23 +83,36 @@ public class Register extends AppCompatActivity {
                     return;
                 }
 
+                if (TextUtils.isEmpty(repeatPassword)){
+                    Toast.makeText(Register.this, "Şifrenizi Tekrar Girin", Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
-                mAuth.createUserWithEmailAndPassword(email, password)
-                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
+                if(password.equals(repeatPassword)){
+
+                    mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+
+                            if (task.isSuccessful()) {
+                                Intent intent = new Intent(getApplicationContext(), Login.class);
                                 progressBar.setVisibility(View.VISIBLE);
-
-                                if (task.isSuccessful()) {
-                                    Intent intent = new Intent(getApplicationContext(), Login.class);
-                                    startActivity(intent);
-
-
-                                } else {
-                                    Toast.makeText(Register.this, "Doğrulama Başarısız", Toast.LENGTH_SHORT).show();
-                                }
+                                startActivity(intent);
                             }
-                        });
+
+                            else {
+                                Toast.makeText(Register.this, "Doğrulama Başarısız", Toast.LENGTH_SHORT).show();
+                            }
+
+                        }
+                    });
+
+
+                }
+                else{
+                    Toast.makeText(Register.this, "Şifreler Farklı", Toast.LENGTH_SHORT).show();
+
+                }
 
             }
         });

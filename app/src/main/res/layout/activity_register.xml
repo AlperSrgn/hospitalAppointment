@@ -45,6 +45,21 @@
             android:layout_height="wrap_content"
             android:drawableEnd="@drawable/ic_password"/>
     </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/border"
+        android:paddingHorizontal="5dp"
+        android:layout_marginTop="10dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/repeatPassword"
+            android:hint="@string/sifre"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_password"/>
+    </com.google.android.material.textfield.TextInputLayout>
     
     <ProgressBar
         android:id="@+id/progressBar"
@@ -54,11 +69,13 @@
 
     <Button
         android:id="@+id/btn_register"
-        android:layout_width="106dp"
+        android:layout_width="110dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="@string/kayıt_ol"
-        android:background="@color/material_dynamic_primary60"
+        android:textSize="15dp"
+        android:background="@drawable/border"
+        android:backgroundTint="@color/material_dynamic_primary60"
         android:textColor="@color/white" />
     
     <TextView

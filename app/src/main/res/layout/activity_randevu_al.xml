@@ -7,7 +7,7 @@
     android:background="#FFFFFF"
     android:gravity="center"
     android:orientation="vertical"
-    android:padding="15dp"
+    android:paddingHorizontal="15dp"
 
     tools:context=".RandevuAl">
 
@@ -15,7 +15,7 @@
     <ImageView
         android:layout_width="180dp"
         android:layout_height="180dp"
-        android:layout_marginTop="-75dp"
+        android:layout_marginTop="-50dp"
         android:src="@drawable/randevu" />
 
 
@@ -81,6 +81,7 @@
             android:inputType="number" />
     </com.google.android.material.textfield.TextInputLayout>
 
+
     <Button
         android:layout_width="380dp"
         android:layout_height="48dp"
@@ -123,6 +124,13 @@
         android:entries="@array/saatler"
         android:hint="@string/saat_secim"
         android:inputType="text" />
+
+    <Spinner
+        android:id="@+id/alan"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:entries="@array/alanlar"
+        android:hint="@string/alan_secim"/>
 
     <Button
         android:layout_width="match_parent"

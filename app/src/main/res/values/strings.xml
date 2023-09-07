@@ -23,6 +23,7 @@
     <string name="randevu_sil">RANDEVUYU SİL</string>
     <string name="hekimler">HEKİMLER</string>
     <string name="tarih">Tarih</string>
+    <string name="alan_secim">Alan</string>
 
 
     <string-array name="sehirler">
@@ -156,6 +157,48 @@
         <item>16:30</item>
         <item>16:45</item>
         <item>17:00</item>
+    </string-array>
+
+    <string-array name="alanlar">
+        <item>Aile Hekimliği</item>
+        <item>Anesteziyoloji ve Reanimasyon</item>
+        <item>Askeri Sağlık Hizmetleri</item>
+        <item>Beyin ve Sinir Cerrahisi</item>
+        <item>Çocuk Cerrahisi</item>
+        <item>Deri ve Zührevi Hastalıkları</item>
+        <item>Enfeksiyon Hastalıkları ve Klinik Mikrobiyoloji</item>
+        <item>Çocuk ve Ergen Ruh Sağlığı ve Hastalıkları</item>
+        <item>Fiziksel Tıp ve Rehabilitasyon</item>
+        <item>Çocuk Sağlığı ve Hastalıkları</item>
+        <item>Genel Cerrahi</item>
+        <item>Fizyoloji</item>
+        <item>Göğüs Cerrahisi</item>
+        <item>Göğüs Hastalıkları</item>
+        <item>Göz Hastalıkları</item>
+        <item>Halk Sağlığı</item>
+        <item>Hava ve Uzay Hekimliği</item>
+        <item>Histoloji ve Embriyoloji</item>
+        <item>İç Hastalıkları</item>
+        <item>Kadın Hastalıkları ve Doğum</item>
+        <item>Kalp ve Damar Cerrahisi</item>
+        <item>Kardiyoloji</item>
+        <item>Kulak Burun Boğaz Hastalıkları</item>
+        <item>Nöroloji</item>
+        <item>Nükleer Tıp</item>
+        <item>Ortopedi ve Travmatoloji</item>
+        <item>Plastik, Rekonstrüktif ve Estetik Cerrahi</item>
+        <item>Radyasyon Onkolojisi</item>
+        <item>Radyoloji</item>
+        <item>Spor Hekimliği</item>
+        <item>Ruh Sağlığı ve Hastalıkları</item>
+        <item>Sualtı Hekimliği ve Hiperbarik Tıp</item>
+        <item>Tıbbi Biyokimya</item>
+        <item>Tıbbi Ekoloji ve Hidroklimatoloji</item>
+        <item>Tıbbi Farmakoloji</item>
+        <item>Tıbbi Genetik</item>
+        <item>Tıbbi Mikrobiyoloji</item>
+        <item>Tıbbi Patoloji</item>
+        <item>Üroloji</item>
     </string-array>
 
     <string-array name="hastaneler">hastaneler</string-array>

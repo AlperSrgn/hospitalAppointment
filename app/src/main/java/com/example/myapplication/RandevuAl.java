@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -30,7 +31,6 @@ import java.util.Map;
 
 public class RandevuAl extends AppCompatActivity {
 
-
     private Button BtnTarih;
     private DatePickerDialog datePickerDialog;
     private TextView DateTxt;
@@ -38,7 +38,7 @@ public class RandevuAl extends AppCompatActivity {
     private int year, month, dayOfMonth;
     private DatabaseReference mDatabase;
     private TextInputEditText TextInputEditTextAd,TextInputEditTextSoyad,TextInputEditTextTcNo,TextInputEditTextTelefon;
-    private Spinner SpinnerSehirler, SpinnerHastaneler, SpinnerSaatler;
+    private Spinner SpinnerSehirler, SpinnerHastaneler, SpinnerSaatler, SpinnerAlanlar;
 
 
     Map<String, ArrayList<String>> HastanelerMap;
@@ -58,6 +58,7 @@ public class RandevuAl extends AppCompatActivity {
         SpinnerSehirler = findViewById(R.id.sehir);
         SpinnerHastaneler = findViewById(R.id.hastaneler);
         SpinnerSaatler = findViewById(R.id.saat);
+        SpinnerAlanlar = findViewById(R.id.alan);
 
 
         initializeHastaneler();
@@ -88,6 +89,7 @@ public class RandevuAl extends AppCompatActivity {
 
 
     public void writeNewUser() {
+
         User user = new User(TextInputEditTextAd.getText().toString(),
                 TextInputEditTextSoyad.getText().toString(),
                 TextInputEditTextTcNo.getText().toString(),
@@ -95,15 +97,17 @@ public class RandevuAl extends AppCompatActivity {
                 DateTxt.getText().toString(),
                 SpinnerSehirler.getSelectedItem().toString(),
                 SpinnerHastaneler.getSelectedItem().toString(),
+                SpinnerAlanlar.getSelectedItem().toString(),
                 SpinnerSaatler.getSelectedItem().toString());
-
 
         mDatabase.child("users").child(user.getKimlikNo()).setValue(user);
     }
 
 
 
+
     public void sendData(View view) {
+        Toast.makeText(RandevuAl.this, "Randevu Oluşturuldu", Toast.LENGTH_SHORT).show();
         writeNewUser();
     }
 

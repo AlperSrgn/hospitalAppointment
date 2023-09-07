@@ -64,8 +64,8 @@ public class MainActivity extends AppCompatActivity {
         buttonRandevularim.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Randevularim.class);
-                startActivity(intent);
+               Intent intent = new Intent(getApplicationContext(), Randevularim.class);
+               startActivity(intent);
             }
         });
 

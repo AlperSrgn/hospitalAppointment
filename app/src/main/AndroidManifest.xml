@@ -18,10 +18,13 @@
             android:name=".Alanlar"
             android:exported="false" />
         <activity
+            android:name=".Randevularim"
+            android:exported="false" />
+        <activity
             android:name=".Hekimler"
             android:exported="false" />
         <activity
-            android:name=".Randevularim"
+            android:name=".Admin"
             android:exported="false" />
         <activity
             android:name=".RandevuAl"
