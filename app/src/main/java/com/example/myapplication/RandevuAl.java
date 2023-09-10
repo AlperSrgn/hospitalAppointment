@@ -16,8 +16,11 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -37,6 +40,8 @@ public class RandevuAl extends AppCompatActivity {
     private Calendar calendar;
     private int year, month, dayOfMonth;
     private DatabaseReference mDatabase;
+    private FirebaseAuth mAuth;
+    private FirebaseUser mUser;
     private TextInputEditText TextInputEditTextAd,TextInputEditTextSoyad,TextInputEditTextTcNo,TextInputEditTextTelefon;
     private Spinner SpinnerSehirler, SpinnerHastaneler, SpinnerSaatler, SpinnerAlanlar;
 
@@ -60,11 +65,12 @@ public class RandevuAl extends AppCompatActivity {
         SpinnerSaatler = findViewById(R.id.saat);
         SpinnerAlanlar = findViewById(R.id.alan);
 
+        mAuth = FirebaseAuth.getInstance();
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+
 
         initializeHastaneler();
         setupSehirlerSpinner();
-
-        mDatabase = FirebaseDatabase.getInstance().getReference();
 
 
         BtnTarih.setOnClickListener(new View.OnClickListener() {
@@ -89,6 +95,7 @@ public class RandevuAl extends AppCompatActivity {
 
 
     public void writeNewUser() {
+        mUser = mAuth.getCurrentUser();
 
         User user = new User(TextInputEditTextAd.getText().toString(),
                 TextInputEditTextSoyad.getText().toString(),
@@ -100,14 +107,25 @@ public class RandevuAl extends AppCompatActivity {
                 SpinnerAlanlar.getSelectedItem().toString(),
                 SpinnerSaatler.getSelectedItem().toString());
 
-        mDatabase.child("users").child(user.getKimlikNo()).setValue(user);
+        mDatabase.child("users").child(mUser.getUid())
+                .setValue(user).addOnCompleteListener(RandevuAl.this, new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if(task.isSuccessful()){
+                    Toast.makeText(RandevuAl.this, "Randevu Oluşturuldu", Toast.LENGTH_SHORT).show();
+                }
+
+                else{
+                    Toast.makeText(RandevuAl.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 
 
 
 
     public void sendData(View view) {
-        Toast.makeText(RandevuAl.this, "Randevu Oluşturuldu", Toast.LENGTH_SHORT).show();
         writeNewUser();
     }
 
