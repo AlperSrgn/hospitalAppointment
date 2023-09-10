@@ -87,6 +87,7 @@ public class RandevuAl extends AppCompatActivity {
                                 DateTxt.setText(day + "/" + (month+1) + "/" + year);
                             }
                         }, year, month, dayOfMonth);
+                datePickerDialog.getDatePicker().setMinDate(calendar.getTimeInMillis());        //geçmiş tarihleri kapatma
                 datePickerDialog.show();
             }
         });
