@@ -95,10 +95,9 @@ public class Login extends AppCompatActivity {
                                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                                     startActivity(intent);
 
-
-                                } else {
+                                }
+                                else {
                                     Toast.makeText(Login.this, "Doğrulama Başarısız", Toast.LENGTH_SHORT).show();
-
                                 }
                             }
                         });

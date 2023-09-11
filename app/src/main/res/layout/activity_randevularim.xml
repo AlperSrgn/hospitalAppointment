@@ -27,8 +27,8 @@
     <TextView
         android:id="@+id/dbAd"
         android:layout_width="match_parent"
-        android:textSize="20dp"
-        android:layout_height="40dp" />
+        android:layout_height="wrap_content"
+        android:textSize="20dp"/>
 
     <TextView
         android:layout_width="100dp"
@@ -41,7 +41,7 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:textSize="20dp"
         android:id="@+id/dbSoyad"/>
 
@@ -55,7 +55,7 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:textSize="20dp"
         android:id="@+id/dbAlan"/>
 
@@ -69,7 +69,7 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:textSize="20dp"
         android:id="@+id/dbHastane"/>
 
@@ -83,7 +83,7 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:textSize="20dp"
         android:id="@+id/dbTarih"/>
 
@@ -97,19 +97,22 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:textSize="20dp"
         android:id="@+id/dbSaat"/>
+
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="20dp"
-        android:text="@string/randevu_sil"
-        android:id="@+id/randevuSilBtn"
-        android:textColor="@color/white"
+        android:paddingHorizontal="100dp"
+        android:onClick="deleteData"
         android:background="@drawable/border"
-        android:backgroundTint="@android:color/holo_red_light" />
+        android:backgroundTint="@android:color/holo_red_light"
+        android:drawableLeft="@drawable/baseline_delete_24"
+        android:text="@string/randevu_sil"
+        android:textColor="@color/white" />
 
 </LinearLayout>

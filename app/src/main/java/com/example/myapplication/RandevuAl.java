@@ -125,7 +125,6 @@ public class RandevuAl extends AppCompatActivity {
 
 
 
-
     public void sendData(View view) {
         writeNewUser();
     }
