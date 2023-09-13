@@ -4,6 +4,6 @@
     android:shape="rectangle">
     <corners android:radius="10dp" />
     <!--Border rengini tanımlama-->
-    <stroke android:width="1dp" android:color="#020707" />
+    <stroke android:width="1dp" />
     <!--Background(arkaplan) rengini tanımlama-->
 </shape>

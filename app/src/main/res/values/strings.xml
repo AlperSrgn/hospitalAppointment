@@ -25,6 +25,7 @@
     <string name="tarih">Tarih</string>
     <string name="alan_secim">Alan</string>
     <string name="randevu_goster">Randevumu Göster</string>
+    <string name="sifremi_unuttum">Şifremi Unuttum</string>
 
 
     <string-array name="sehirler">
