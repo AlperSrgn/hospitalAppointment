@@ -17,7 +17,6 @@
         android:src="@drawable/login" />
 
 
-
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -36,16 +35,25 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@drawable/border"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/black"
         android:paddingHorizontal="5dp">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/password"
             android:hint="@string/sifre"
             android:inputType="textPassword"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            android:drawableEnd="@drawable/ic_password"/>
+            android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/txtforgotPassword"
+        android:textSize="17sp"
+        android:text="@string/sifremi_unuttum"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="textEnd"/>
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -64,14 +72,7 @@
         android:backgroundTint="@color/design_default_color_secondary"
         android:textColor="@color/white" />
 
-    <TextView
-        android:id="@+id/txtforgotPassword"
-        android:textSize="17sp"
-        android:gravity="center"
-        android:layout_marginTop="20dp"
-        android:text="@string/sifremi_unuttum"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+
 
     <TextView
         android:id="@id/registerNow"

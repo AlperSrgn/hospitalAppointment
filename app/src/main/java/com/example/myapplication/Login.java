@@ -25,7 +25,7 @@ public class Login extends AppCompatActivity {
     Button buttonLogin;
     FirebaseAuth mAuth;
     ProgressBar progressBar;
-    TextView textView, textViewForgotPassword;
+    TextView textViewRegister, textViewForgotPassword;
 
 
     // Logged in Check
@@ -51,18 +51,16 @@ public class Login extends AppCompatActivity {
         editTextPassword = findViewById(R.id.password);
         buttonLogin = findViewById(R.id.btn_login);
         progressBar = findViewById(R.id.progressBar);
-        textView = findViewById(R.id.registerNow);
+        textViewRegister = findViewById(R.id.registerNow);
         textViewForgotPassword = findViewById(R.id.txtforgotPassword);
 
 
-        textView.setOnClickListener(new View.OnClickListener() {
+        textViewRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), Register.class);
                 startActivity(intent);
-
             }
-
         });
 
         textViewForgotPassword.setOnClickListener(new View.OnClickListener() {
@@ -76,20 +74,18 @@ public class Login extends AppCompatActivity {
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                progressBar.setVisibility(View.VISIBLE);
                 String email, password;
                 email = String.valueOf(editTextEmail.getText());
                 password = String.valueOf(editTextPassword.getText());
 
-                if (TextUtils.isEmpty(email)){
-                    Toast.makeText(Login.this, "Email Girin", Toast.LENGTH_SHORT).show();
+                if (TextUtils.isEmpty(email) || TextUtils.isEmpty(password)){
+                    Toast.makeText(Login.this, "Boş alan bırakılamaz", Toast.LENGTH_SHORT).show();
                     return;
+                }
+                else{
+                    progressBar.setVisibility(View.VISIBLE);
                 }
 
-                if (TextUtils.isEmpty(password)){
-                    Toast.makeText(Login.this, "Şifrenizi Girin", Toast.LENGTH_SHORT).show();
-                    return;
-                }
 
                 mAuth.signInWithEmailAndPassword(email, password)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
