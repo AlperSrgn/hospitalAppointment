@@ -24,12 +24,6 @@
             android:name=".Randevularim"
             android:exported="false" />
         <activity
-            android:name=".Hekimler"
-            android:exported="false" />
-        <activity
-            android:name=".Admin"
-            android:exported="false" />
-        <activity
             android:name=".RandevuAl"
             android:exported="false" />
         <activity

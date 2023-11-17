@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -18,68 +19,81 @@
         android:text=" "
         android:textStyle="bold" />
 
+
     <Button
         android:id="@+id/button_randevu_al"
         android:layout_width="200dp"
         android:layout_height="100dp"
-        android:layout_marginTop="50dp"
         android:layout_marginHorizontal="2dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
         android:background="@drawable/menu_border"
         android:backgroundTint="@color/white"
-        android:text="@string/randevu_al"
+        android:drawableLeft="@drawable/randevual"
         android:paddingHorizontal="10dp"
+        android:text="@string/randevu_al"
         android:textColor="@color/black"
         android:textColorHighlight="#FFFFFF"
         android:textColorHint="#FFFFFF"
-        android:drawableLeft="@drawable/randevual"
-        android:textSize="16.5sp" />
+        android:textSize="16.5sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_details" />
 
     <Button
         android:id="@+id/button_randevularim"
         android:layout_width="200dp"
         android:layout_height="100dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
         android:layout_toRightOf="@+id/button_randevu_al"
         android:background="@drawable/menu_border"
-        android:paddingHorizontal="10dp"
         android:backgroundTint="@color/white"
+        android:drawableLeft="@drawable/randevularim"
+        android:paddingHorizontal="10dp"
         android:text="@string/randevularim"
         android:textColor="@color/black"
         android:textColorHighlight="#FFFFFF"
         android:textColorHint="#FFFFFF"
-        android:drawableLeft="@drawable/randevularim"
-        android:textSize="16.5sp" />
+        android:textSize="16.5sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_randevu_al" />
 
     <Button
         android:id="@+id/alanlar"
         android:layout_width="200dp"
         android:layout_height="100dp"
         android:layout_below="@+id/button_randevu_al"
-        android:layout_marginTop="100dp"
         android:layout_marginHorizontal="2dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/menu_border"
-        android:paddingHorizontal="10dp"
         android:backgroundTint="@color/white"
+        android:drawableLeft="@drawable/alan"
+        android:paddingHorizontal="10dp"
         android:text="@string/alanlar"
         android:textColor="@color/black"
-        android:drawableLeft="@drawable/alan"
-        android:textSize="16.5sp" />
-
+        android:textSize="16.5sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_randevularim" />
 
     <Button
         android:id="@+id/logout"
         android:layout_width="200dp"
         android:layout_height="100dp"
-        android:layout_marginTop="100dp"
         android:layout_below="@+id/button_randevularim"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
         android:layout_toRightOf="@+id/alanlar"
         android:background="@drawable/menu_border"
         android:backgroundTint="@color/white"
+        android:drawableLeft="@drawable/logout"
         android:paddingHorizontal="10dp"
         android:text="@string/cikisYap"
-        android:drawableLeft="@drawable/logout"
-        android:textSize="16.5sp"/>
+        android:textSize="16.5sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alanlar" />
 
 
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

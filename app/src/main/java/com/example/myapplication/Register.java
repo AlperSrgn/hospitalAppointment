@@ -60,6 +60,7 @@ public class Register extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), Login.class);
                 startActivity(intent);
+                finish();
 
             }
 
@@ -98,6 +99,7 @@ public class Register extends AppCompatActivity {
                                 Intent intent = new Intent(getApplicationContext(), Login.class);
                                 progressBar.setVisibility(View.VISIBLE);
                                 startActivity(intent);
+                                finish();
                             }
 
                             else {

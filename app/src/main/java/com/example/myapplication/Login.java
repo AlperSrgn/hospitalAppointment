@@ -92,13 +92,10 @@ public class Login extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 progressBar.setVisibility(View.GONE);
-                                if (task.isSuccessful() && (email.equals("admin@gmail.com") && password.equals("password"))) {
-                                    Intent intent = new Intent(getApplicationContext(), Admin.class);
-                                    startActivity(intent);
-                                }
-                                else if (task.isSuccessful()) {
+                                 if (task.isSuccessful()) {
                                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                                     startActivity(intent);
+                                    finish();
 
                                 }
                                 else {

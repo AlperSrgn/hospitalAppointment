@@ -39,6 +39,7 @@ public class ForgotPassword extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), Login.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -66,6 +67,7 @@ public class ForgotPassword extends AppCompatActivity {
                 Toast.makeText(ForgotPassword.this, "Şifre sıfırlama bağlantınız E-posta adresinize gönderilmiştir", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(ForgotPassword.this, Login.class);
                 startActivity(intent);
+                finish();
             }
 
         }) .addOnFailureListener(new OnFailureListener() {
